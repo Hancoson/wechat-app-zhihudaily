@@ -1,0 +1,21 @@
+<view hidden="{{!loading}}" class="weui-loadmore">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
+</view>
+<view class="article_top">
+  <image class='imgs' src='{{img}}'></image>
+  <view class=" weui-article__h1 ">{{data.title}}</view>
+</view>
+<view class="page__bd aritcle">
+  <view class="weui-article">
+    <view class="weui-article__section ">
+      <view class="weui-article__section ">
+        <view class="weui-article__p comments-content ">
+          {{body}}
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--logs.wxml-->
+<view class="page__bd">
+  <view class="weui-article">
+    <view class="weui-article__h1">关于知乎日报</view>
+    <view class="weui-article__section">
+      <view class="weui-article__title">说明：</view>
+      <view class="weui-article__section">
+        <view class="weui-article__p">
+          简单的知乎日报客户端，实现了获取最新文章，主题日报，日报详情，主题列表等的数据展示。
+        </view>
+      </view>
+
+      <view class="weui-article__title">数据接口：</view>
+      <view class="weui-article__section">
+        <view class="weui-article__p">
+          数据接口主要依据「知乎日报 API」
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

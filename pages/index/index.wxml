@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<!--include src="./../layout/searchbar/searchbar.wxml" /-->
+<swiper class="swiper-boxs" indicator-dots autoplay duration="300">
+  <swiper-item wx:for="{{top_stories}}">
+    <navigator url="../article/article?id={{top_stories[index].id}}">
+      <image mode="aspectFill" class="swiper-boxs-img" src="{{top_stories[index].image}}" />
+    </navigator>
+  </swiper-item>
+</swiper>
+<view class="page__bd">
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+
+      <view hidden="{{!loading}}" class="weui-loadmore">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
+
+
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">{{time}}</view>
+        <view class="weui-panel__bd">
+          <navigator hover-class="navigator-hover" wx:for="{{items}}" class="weui-media-box weui-media-box_appmsg" url="../article/article?id={{item.id}}">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.images[0]}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__desc">{{item.title}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>
+<include src="./../layout/foot/foot.wxml" />
+<include src="./../layout/tabbar/tabbar.wxml" />

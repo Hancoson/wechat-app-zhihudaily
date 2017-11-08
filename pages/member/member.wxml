@@ -1,0 +1,11 @@
+<!--pages/member/member.wxml-->
+
+<view class='member' >
+  <image class='avatar' src='{{data.avatar_large}}'></image>
+  <text class='name'>{{data.username}}</text>
+  <text class='time'>加入时间：{{time}}</text>
+</view>
+
+<include src="./../layout/foot/foot.wxml" />
+
+<include src="./../layout/tabbar/tabbar.wxml" />

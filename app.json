@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/layout/foot/foot",
+    "pages/member/member",
+    "pages/test/test",
+    "pages/article/article"
+  ],
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "又一个知乎日报",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#efeff4",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/img/home.png",
+        "selectedIconPath": "assets/img/home-a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "assets/img/iconfont-mingpian.png",
+        "selectedIconPath": "assets/img/iconfont-mingpian-a.png",
+        "text": "关于"
+      }
+    ]
+  }
+}
