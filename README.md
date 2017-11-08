@@ -12,10 +12,10 @@
 - 文章 - [https://news-at.zhihu.com/api/4/news](https://news-at.zhihu.com/api/4/news)
 
 ## 主要截图
-![01](http://7xtxh3.com1.z0.glb.clouddn.com/01.PNG)
+![01](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-01.png)
 
-![02](http://7xtxh3.com1.z0.glb.clouddn.com/02.PNG)
+![02](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-02.png)
 
-![03](http://7xtxh3.com1.z0.glb.clouddn.com/03.PNG)
+![03](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-03.png)
 
-![04](http://7xtxh3.com1.z0.glb.clouddn.com/04.PNG)
+![04](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-04.png)
