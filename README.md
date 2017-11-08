@@ -12,3 +12,10 @@
 - 文章 - [https://news-at.zhihu.com/api/4/news](https://news-at.zhihu.com/api/4/news)
 
 ## 主要截图
+![01](http://7xtxh3.com1.z0.glb.clouddn.com/01.PNG)
+
+![02](http://7xtxh3.com1.z0.glb.clouddn.com/02.PNG)
+
+![03](http://7xtxh3.com1.z0.glb.clouddn.com/03.PNG)
+
+![04](http://7xtxh3.com1.z0.glb.clouddn.com/04.PNG)

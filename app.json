@@ -4,7 +4,6 @@
     "pages/about/about",
     "pages/layout/foot/foot",
     "pages/member/member",
-    "pages/test/test",
     "pages/article/article"
   ],
   "networkTimeout": {
