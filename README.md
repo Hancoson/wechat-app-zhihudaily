@@ -11,6 +11,32 @@
 - 最新日报 -  [https://news-at.zhihu.com/api/4/news/latest](https://news-at.zhihu.com/api/4/news/latest)
 - 文章 - [https://news-at.zhihu.com/api/4/news](https://news-at.zhihu.com/api/4/news)
 
+##目录结构
+```
+├── app.js
+├── app.json
+├── app.wxss
+├── config.js
+├── pages
+│   ├── about
+│   ├── article
+│   ├── index
+│   └── layout
+├── images
+│   ├── 01.png
+│   ├── 02.png
+│   ├── 03.png
+│   └── 04.png
+└── utils
+    ├── config.js
+    ├── fetch.js
+    ├── format.js
+    ├── getDate.js
+    └── util.js
+```
+## 开发环境
+微信开发者工具 v1.01.1711020
+
 ## 主要截图
 ![01](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-01.png)
 
@@ -19,3 +45,7 @@
 ![03](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-03.png)
 
 ![04](http://7xtxh3.com1.z0.glb.clouddn.com/weixin-zhihu-04.png)
+
+## 参考
+- [UI](https://weui.io)
+- [微信公众平台|小程序](https://mp.weixin.qq.com/debug/wxadoc/introduction/index.html?t=2017112)
