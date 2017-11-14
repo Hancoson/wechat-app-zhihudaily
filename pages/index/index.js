@@ -1,10 +1,9 @@
-//index.js
-//获取应用实例
+//index.js 获取应用实例
 const sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 const app = getApp()
 const fetch = require('../../utils/fetch.js');
 const CONFIG = require('../../utils/config.js')
-import { getDate, subString } from '../../utils/getDate.js'
+import {getDate, subString} from '../../utils/getDate.js'
 Page({
   data: {
     top: 10,
@@ -14,15 +13,24 @@ Page({
     time: '',
     items: [],
     title: '',
-    tabs: ["当天日报", "过往日报"],
+    tabs: [
+      "当天日报", "过往日报"
+    ],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    top_stories:{}
+    top_stories: {},
+    currentPage: 1
   },
-  asd: function (e) {
-    console.log(e)
+
+  // 上拉加载更多
+  loadMore: function () {
+    setTimeout(function () {
+      console.log('上拉加载更多');
+
+    }, 300);
   },
+
   onLoad: function (options) {
     var that = this;
     wx.getSystemInfo({
@@ -33,45 +41,43 @@ Page({
         });
       }
     });
-    fetch(`${CONFIG.API.last}`, {})
-      .then(res => {
-        this.setData({
-          loading: false,
-          time: subString(res.data.date),
-          items: res.data.stories,
-          top_stories: res.data.top_stories ? res.data.top_stories : this.data.top_stories
-        })
+    fetch(`${CONFIG.API.last}`, {}).then(res => {
+      this.setData({
+        loading: false,
+        time: subString(res.data.date),
+        items: res.data.stories,
+        top_stories: res.data.top_stories
+          ? res.data.top_stories
+          : this.data.top_stories
       })
-      .catch(e => {
-        this.setData({ title: '获取数据异常', loading: false })
-      })
-
+    }).catch(e => {
+      this.setData({title: '获取数据异常', loading: false})
+    })
 
   },
   tabClick: function (e) {
     console.log(e)
-    let url='';
-    url = e.currentTarget.id === '1' ? `${CONFIG.API.before}/${getDate()}` : `${CONFIG.API.last}`
-    this.setData({
-      sliderOffset: e.currentTarget.offsetLeft,
-      activeIndex: e.currentTarget.id
-    });
+    let url = '';
+    url = e.currentTarget.id === '1'
+      ? `${CONFIG.API.before}/${getDate()}`
+      : `${CONFIG.API.last}`
+    this.setData({sliderOffset: e.currentTarget.offsetLeft, activeIndex: e.currentTarget.id});
 
-    fetch(`${url}`, {})
-      .then(res => {
+    fetch(`${url}`, {}).then(res => {
 
-        console.log(111, subString('20171108'))
-        this.setData({
-          loading: false,
-          time: subString(res.data.date),
-          items: res.data.stories,
-          top_stories: res.data.top_stories ? res.data.top_stories : this.data.top_stories
-        })
-        console.log(res, this)
+      console.log(111, subString('20171108'))
+      this.setData({
+        loading: false,
+        time: subString(res.data.date),
+        items: res.data.stories,
+        top_stories: res.data.top_stories
+          ? res.data.top_stories
+          : this.data.top_stories
       })
-      .catch(e => {
-        this.setData({ title: '获取数据异常', loading: false })
-      })
+      console.log(res, this)
+    }).catch(e => {
+      this.setData({title: '获取数据异常', loading: false})
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -80,27 +86,17 @@ Page({
     console.log(this)
   },
 
-
   showInput: function () {
-    this.setData({
-      inputShowed: true
-    });
+    this.setData({inputShowed: true});
   },
   hideInput: function () {
-    this.setData({
-      inputVal: "",
-      inputShowed: false
-    });
+    this.setData({inputVal: "", inputShowed: false});
   },
   clearInput: function () {
-    this.setData({
-      inputVal: ""
-    });
+    this.setData({inputVal: ""});
   },
   inputTyping: function (e) {
-    this.setData({
-      inputVal: e.detail.value
-    });
+    this.setData({inputVal: e.detail.value});
     console.log(e)
   }
 })

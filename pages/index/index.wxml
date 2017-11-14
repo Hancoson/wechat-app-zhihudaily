@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <!--include src="./../layout/searchbar/searchbar.wxml" /-->
+<scroll-view class="list" style="height: 1208rpx" scroll-y="true" bindscrolltolower="loadMore">
 <swiper class="swiper-boxs" indicator-dots autoplay duration="300">
   <swiper-item wx:for="{{top_stories}}">
     <navigator url="../article/article?id={{top_stories[index].id}}">
@@ -40,8 +41,6 @@
       </view>
     </view>
   </view>
-
-
 </view>
-<include src="./../layout/foot/foot.wxml" />
+ </scroll-view>
 <include src="./../layout/tabbar/tabbar.wxml" />

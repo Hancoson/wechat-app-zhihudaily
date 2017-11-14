@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import 'assets/style/weui.wxss';
+@import 'wxParse/wxParse.wxss';
 page{
   //background: #e2e2e2;
 }
